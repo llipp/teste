@@ -2,58 +2,326 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>Teste</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>KpopTools</title>
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
+    <div class="hamb">
+      <div class="line" id="line1"></div>
+      <div class="line" id="line2"></div>
+      <div class="line" id="line3"></div>
+      <span>Fechar</span>
+    </div>
 
-        <div class="hamb">
-            <div class="line" id="line1"></div>
-            <div class="line" id="line2"></div>
-            <div class="line" id="line3"></div>
-            <span>Fechar</span>
+    <header id="home">
+      <div class="img-wrapper">
+        <img src="imagens/bg.jpg" alt="">
+      </div>
+      <div class="banner">
+        <h1>KPOP</h1>
+        <p>Wins, Fancam, Realitys, PlayList, você encontra aqui!</p>
+        <button>SAIBA MAIS</button>
+      </div>
+    </header>
+
+
+    <aside class="sidebar">
+      <nav>
+        <ul class="menu">
+          <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
+          <li class="menu-item"><a href="#win" class="menu-link">Wins</a></li>
+          <li class="menu-item"><a href="#projetos" class="menu-link">Reality</a></li>
+          <li class="menu-item"><a href="#playlist" class="menu-link">Playlist</a></li>
+          <li class="menu-item"><a href="#" class="menu-link">Sorteador</a></li>
+          <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-media">
+        <a href="https://www.instagram.com/fldomingos" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/F7Domingos" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.twitch.tv/llip_" target="_blank"><i class="fab fa-twitch"></i></a>
+        <a href="https://discord.gg/rZuBGTGgPM" target="_blank"><i class="fab fa-discord"></i></a>
+      </div>
+
+    </aside>
+
+
+    
+      <div class="sessao-header" id="win">
+        <h1>Wins de Fevereiro</h1>
+      </div>
+      <div class="tabela">
+        <nav class="nav_tabs">
+          <ul>
+            <li>
+              <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+              <label for="tab1" class="tab_label">Semana 1</label>
+              <div class="tab-content">
+                <h2>Semana 1</h2>
+                <table>
+                  <tr>
+                    <th><img src="imagens/tshow.png"></th>
+                    <td>CANCELADO</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/mbank.png"></th>
+                    <td>-</td>
+                 </tr>
+                  <tr>
+                    <th><img src="imagens/schamp.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/mcore.png"></th>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th><img src="imagens/mcount.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/ink.png"></th>
+                    <td>-</td>
+                  </tr>
+                              
+                </table>
+              
+              </div>
+            </li>
+            <li>
+              <input type="radio" name="tabs" class="rd_tab" id="tab2">
+              <label for="tab2" class="tab_label">Semana 2</label>
+              <div class="tab-content">
+                <h2>Semana 2</h2>
+                <table>
+                  <tr>
+                    <th><img src="imagens/tshow.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/mbank.png"></th>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th><img src="imagens/schamp.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/mcore.png"></th>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th><img src="imagens/mcount.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/ink.png"></th>
+                    <td>-</td>
+                  </tr>
+                              
+                </table>
+
+              </div>
+            </li>
+            <li>
+              <input type="radio" name="tabs" class="rd_tab" id="tab3">
+              <label for="tab3" class="tab_label">Semana 3</label>
+              <div class="tab-content">
+                <h2>Semana 3</h2>
+                <table>
+                  <tr>
+                    <th><img src="imagens/tshow.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/mbank.png"></th>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th><img src="imagens/schamp.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/mcore.png"></th>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th><img src="imagens/mcount.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/ink.png"></th>
+                    <td>-</td>
+                  </tr>
+                              
+                </table>
+
+              </div>
+            </li>
+            <li>
+              <input type="radio" name="tabs" class="rd_tab" id="tab4">
+              <label for="tab4" class="tab_label">Semana 4</label>
+              <div class="tab-content">
+                <h2>Semana 4</h2>
+                <table>
+                  <tr>
+                    <th><img src="imagens/tshow.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/mbank.png"></th>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th><img src="imagens/schamp.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/mcore.png"></th>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th><img src="imagens/mcount.png"></th>
+                    <td>-</td>
+                    <th><img src="imagens/vaz.png"></th>
+                    <th><img src="imagens/ink.png"></th>
+                    <td>-</td>
+                  </tr>
+                              
+                </table>
+
+              </div>
+            </li>
+
+          </ul>
+        </nav>        
+      </div>
+
+         
+
+
+    <div class="sessao-projetos" id="projetos">
+      <div class="sessao-header">
+        <h1>My Teenage Girls</h1>
+      </div>
+      <div class="projetos">
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="imagens/proj1.jpg" alt="imagem do projeto ToDo" />
+          </div>
+          <div class="card-info">
+            <h2>Participantes</h2>
+            <h3>Séries 1,2,3 e 4</h3>
+            <p>Conheça as integrantes de cada série, veja as fancans de cada apresentação e confira as eliminações.</p>
+            <button class="btn">Saiba Mais</button>
+          </div>
         </div>
-
-        <header>
-            <div class="img-wrapper">
-                <img src="imagens/bg.jpg" alt="">
-            </div>
-            <div class="banner">
-                <h1>TITULO TESTE DA PAGINA</h1>
-                <p>PARAGRAFO TESTE DA PAGINA</p>
-                <button>SAIBA MAIS</button>
-            </div>
-        </header>
-
-
-        <div class="sidebar">
-            <nav>
-                <ul class="menu">
-                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">menu1</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">menu2</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">menu3</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">menu4</a></li>
-                </ul>
-            </nav>
-            
-            <div class="social-media">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-twitch"></i></a>
-            </div>
-
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="imagens/proj2.jpg" alt="imagem do projeto Maratona" />
+          </div>
+          <div class="card-info">
+            <h2>Apresentações</h2>
+            <h3>Séries 1,2,3 e 4</h3>
+            <p>Confira as apresentações de cada série, as apresentações em conjunto.</p>
+            <button class="btn">Saiba Mais</button>
+          </div>
         </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="imagens/proj3.jpg" alt="imagem do projeto Casa Bela" />
+          </div>
+          <div class="card-info">
+            <h2>Top da Galera</h2>
+            <h3>Top7 do Discord</h3>
+            <p>Veja qual foi o top 7 da galera de cada semana, as mais votadas, os first picks do pessoal do discord</p>
+            <button class="btn">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+     
+
+
+
+
+
+      <section class="sessao-contato" id="playlist">
+        <div class="contato-wrapper">
+          <div class="contato-left"></div>
+          <div class="contato-right">
+            <h1>Contato</h1>
+            <form>
+              <div class="input-group">
+                <input type="text" class="field" id="nome">
+                <label for="nome" class="field-label">Nome</label>
+              </div>
+              <div class="input-group">
+                <input type="text" class="field" id="email">
+                <label for="email" class="field-label">E-mail</label>
+              </div>
+              <div class="input-group">
+                <textarea class="field" id="mensagem"></textarea>
+                <label for="mensagem" class="field-label">Mensagem</label>
+              </div>
+              <button type="submit" class="btn btn-submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="sessao-contato" id="contato">
+        <div class="contato-wrapper">
+          <div class="contato-left"></div>
+          <div class="contato-right">
+            <h1>Contato</h1>
+            <form>
+              <div class="input-group">
+                <input type="text" class="field" id="nome">
+                <label for="nome" class="field-label">Nome</label>
+              </div>
+              <div class="input-group">
+                <input type="text" class="field" id="email">
+                <label for="email" class="field-label">E-mail</label>
+              </div>
+              <div class="input-group">
+                <textarea class="field" id="mensagem"></textarea>
+                <label for="mensagem" class="field-label">Mensagem</label>
+              </div>
+              <button type="submit" class="btn btn-submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <footer>
+        <div class="footer-content">
+          <p>
+            Copyright &copy; 2022, llip - Todos os diretos reservados
+          </p>
+          <div class="social-list">
+            <ul>
+              <li><a href="https://www.instagram.com/fldomingos" target="_blank"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li><a href="https://twitter.com/F7Domingos" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.twitch.tv/llip_" target="_blank"><i class="fab fa-twitch"></i></a></li>
+              <li><a href="https://discord.gg/rZuBGTGgPM" target="_blank"><i class="fab fa-discord"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+
+      <a href="#home" id="link-topo">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+
+
     </div>
 
 </body>
