@@ -10,58 +10,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <script src="js/d3.v4.min.js" charset="utf-8"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
   <title>KpopTools</title>
 </head>
 
 <body>
-
-  <div class="container">
-    <div class="hamb">
-      <div class="line" id="line1"></div>
-      <div class="line" id="line2"></div>
-      <div class="line" id="line3"></div>
-      <span>Fechar</span>
-    </div>
-
-    <header id="home">
-      <div class="img-wrapper">
-        <img src="imagens/bg.jpg" alt="">
-      </div>
-      <div class="banner">
-        <h1>KPOP</h1>
-        <p>Wins, Fancam, Realitys, PlayList, você encontra aqui!</p>
-        <button>SAIBA MAIS</button>
-      </div>
-    </header>
-
-
-    <aside class="sidebar">
-      <nav>
-        <ul class="menu">
-          <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
-          <li class="menu-item"><a href="#win" class="menu-link">Wins</a></li>
-          <li class="menu-item"><a href="#projetos" class="menu-link">Reality</a></li>
-          <li class="menu-item"><a href="#playlist" class="menu-link">Playlist</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Sorteador</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Agenda</a></li>
-          <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
-        </ul>
-      </nav>
-
-      <div class="social-media">
-        <a href="https://www.instagram.com/fldomingos" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/F7Domingos" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.twitch.tv/llip_" target="_blank"><i class="fab fa-twitch"></i></a>
-        <a href="https://discord.gg/rZuBGTGgPM" target="_blank"><i class="fab fa-discord"></i></a>
-      </div>
-
-    </aside>
-
-    <div class="sessao-header">
-      <h1>Participantes</h1>
-    </div>
-
-    
 
 
     <div class="sessao-projetos" id="projetos">
@@ -71,76 +26,138 @@
       <div class="projetos">
         <div class="card">
           <div class="card-img-wrapper">
-            <img src="imagens/mtglogo.png" alt="imagem do projeto ToDo" />
+            <img src="imagens/mtglogo.png" alt="participantes" />
           </div>
           <div class="card-info">
             <h2>Participantes</h2>
             <h3>Séries 1,2,3 e 4</h3>
-            <p>Conheça as integrantes de cada série, veja as fancans de cada apresentação e confira as eliminações.</p>
-            <button class="btn">Saiba Mais</button>
+            <p>Conheça as integrantes de cada série, veja seus rankings e confira as eliminações.</p>
+            <button class="btn" onclick="location.href='participantes.html'">Saiba Mais</button>
           </div>
         </div>
         <div class="card">
           <div class="card-img-wrapper">
-            <img src="imagens/mtg1.jpg" alt="imagem do projeto Maratona" />
+            <img src="imagens/mtg1.jpg" alt="apresentações" />
           </div>
           <div class="card-info">
             <h2>Apresentações</h2>
             <h3>Séries 1,2,3 e 4</h3>
-            <p>Confira as apresentações de cada série, as apresentações em conjunto.</p>
+            <p>Confira as apresentações de cada série, as fancans e apresentações em conjunto.</p>
             <button class="btn">Saiba Mais</button>
           </div>
         </div>
         <div class="card">
           <div class="card-img-wrapper">
-            <img src="imagens/disc.png" alt="imagem do projeto Casa Bela" />
+            <img src="imagens/disc.png" alt="top7 do discord" />
           </div>
           <div class="card-info">
             <h2>Top da Galera</h2>
             <h3>Top7 do Discord</h3>
             <p>Veja qual foi o top 7 da galera de cada semana, as mais votadas, os first picks do pessoal do discord</p>
-            <button class="btn">Saiba Mais</button>
+            <button class="btn" onclick="location.href='https://discord.gg/vwwKecpDH5'">Saiba Mais</button>
           </div>
         </div>
       </div>
 
-     
 
 
 
+ 
 
 
+    <div class="sessao-header">
+      <h1>Participantes</h1>
+    </div>
+    
+    <div class="grafico" id="grafico">
+    <div id="mainWrapper">
 
-
-
-
-      <footer>
-        <div class="footer-content">
-          <p>
-            Copyright &copy; 2022, llip - Todos os diretos reservados
-          </p>
-          <div class="social-list">
-            <ul>
-              <li><a href="https://www.instagram.com/fldomingos" target="_blank"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li><a href="https://twitter.com/F7Domingos" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="https://www.twitch.tv/llip_" target="_blank"><i class="fab fa-twitch"></i></a></li>
-              <li><a href="https://discord.gg/rZuBGTGgPM" target="_blank"><i class="fab fa-discord"></i></a></li>
-            </ul>
+      <div id="graph">
+          <!-- Line Graph -->
+          <div id="plot">
+              <div class="note" id="note0"></div>
+              <div class="note" id="note1"></div>
+              <div class="note" id="note2"></div>
+              <div class="note" id="note3"></div>
+              <div class="note" id="note4"></div>
+              <div class="note" id="note5"></div>
+              <div class="note" id="note6"></div>
+              <div class="note" id="note7"></div>
           </div>
-        </div>
-      </footer>
 
+          <!-- Profile -->
+          <div id="profile">
+              <div id="picWrapper">
+                  <img src="#" id="pic">
+              </div>
+              <div id="textWrapper">
+                  <span id="infoName"></span>
+                  <span id="infoLetter" class="letter"></span>
+                  <div id="infoCompany" class="smallCaps"></div>
+                  <!--<div id="infoRank"></div>-->
+              </div>
+          </div>
+      </div>
 
-      <a href="#home" id="link-topo">
-        <i class="fas fa-arrow-up"></i>
-      </a>
+     <!--  Top 11 -->
+      <div id="chart">
+          <h1>Current Rankings</h1>
+          <table id="top">
+              <thead>
+                  <tr class="smallCaps">
+                      <th onclick="toggleSort('latestRank')" id="latestRank" class="selectedSort" data-asc="true">Rank</th>
+                      <th onclick="toggleSort('name')" id="name" data-asc="false">Nome</th>
+                      <th onclick="toggleSort('letter')" id="letter" data-asc="false">Sala</th>
+                      <th onclick="toggleSort('letter2')" id="letter2" data-asc="false">Eliminada</th>
+                      <th onclick="toggleSort('rankChange')" id="rankChange" data-asc="false">Change</th>
+                  </tr>
+              </thead>
+              <tbody id="topBody">
+              </tbody>
+          </table>
+      </div>
 
-
+  </div>
     </div>
 
-</body>
 
+        
+       <div class="voltar">
+        <button class="btn" onclick="location.href='index.html'">Voltar</button>
+      </div>
+   
+
+
+
+
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          Copyright &copy; 2022, llip - Todos os diretos reservados
+        </p>
+        <div class="social-list">
+          <ul>
+            <li><a href="https://www.instagram.com/fldomingos" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li><a href="https://twitter.com/F7Domingos" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.twitch.tv/llip_" target="_blank"><i class="fab fa-twitch"></i></a></li>
+            <li><a href="https://discord.gg/rZuBGTGgPM" target="_blank"><i class="fab fa-discord"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+    <a href="index.html" id="link-topo">
+      <i class="fas fa-arrow-left"></i>
+    </a>
+
+
+  </div>
+
+</body>
+<script src="js/main.js"></script>
 <script src="script.js"></script>
 
 </html>

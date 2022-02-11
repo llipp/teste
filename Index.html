@@ -10,6 +10,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+ 
+ 
   <title>KpopTools</title>
 </head>
 
@@ -39,11 +41,11 @@
       <nav>
         <ul class="menu">
           <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
+          <li class="menu-item"><a href="#live" class="menu-link">Live</a></li>
           <li class="menu-item"><a href="#win" class="menu-link">Wins</a></li>
           <li class="menu-item"><a href="#projetos" class="menu-link">Reality</a></li>
           <li class="menu-item"><a href="#playlist" class="menu-link">Playlist</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Sorteador</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Agenda</a></li>
+          <li class="menu-item"><a href="#agenda" class="menu-link">Agenda</a></li>
           <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
         </ul>
       </nav>
@@ -56,6 +58,31 @@
       </div>
 
     </aside>
+
+
+
+
+    <div class="sessao-header" id="live">
+      <h1>Live</h1>
+    </div>
+    <!-- Add a placeholder for the Twitch embed -->
+    <div class="twitch-embed" id="twitch-embed">
+
+      <!-- Load the Twitch embed JavaScript file -->
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+      <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+          width: 900,
+          height: 480,
+          channel: "tohrn",
+          autoplay: false,
+          // Only needed if this page is going to be embedded on other websites
+          parent: ["embed.example.com", "othersite.example.com"]
+        });
+      </script>
+    </div>
 
 
 
@@ -105,21 +132,21 @@
               <table>
                 <tr>
                   <th><img src="imagens/tshow.png"></th>
-                  <td>-</td>
+                  <td>CANCELADO</td>
                   <th><img src="imagens/vaz.png"></th>
                   <th><img src="imagens/mbank.png"></th>
-                  <td>-</td>
+                  <td>Ive - Eleven</td>
                 </tr>
                 <tr>
                   <th><img src="imagens/schamp.png"></th>
-                  <td>-</td>
+                  <td>CANCELADO</td>
                   <th><img src="imagens/vaz.png"></th>
                   <th><img src="imagens/mcore.png"></th>
                   <td>-</td>
                 </tr>
                 <tr>
                   <th><img src="imagens/mcount.png"></th>
-                  <td>-</td>
+                  <td>Yena - Smiley</td>
                   <th><img src="imagens/vaz.png"></th>
                   <th><img src="imagens/ink.png"></th>
                   <td>-</td>
@@ -241,38 +268,41 @@
       <div class="projetos">
         <div class="card">
           <div class="card-img-wrapper">
-            <img src="imagens/mtglogo.png" alt="imagem do projeto ToDo" />
+            <img src="imagens/mtglogo.png" alt="participantes" />
           </div>
           <div class="card-info">
             <h2>Participantes</h2>
             <h3>Séries 1,2,3 e 4</h3>
-            <p>Conheça as integrantes de cada série, veja as fancans de cada apresentação e confira as eliminações.</p>
+            <p>Conheça as integrantes de cada série, veja seus rankings e confira as eliminações.</p>
             <button class="btn" onclick="location.href='participantes.html'">Saiba Mais</button>
           </div>
         </div>
         <div class="card">
           <div class="card-img-wrapper">
-            <img src="imagens/mtg1.jpg" alt="imagem do projeto Maratona" />
+            <img src="imagens/mtg1.jpg" alt="apresentações" />
           </div>
           <div class="card-info">
             <h2>Apresentações</h2>
             <h3>Séries 1,2,3 e 4</h3>
-            <p>Confira as apresentações de cada série, as apresentações em conjunto.</p>
+            <p>Confira as apresentações de cada série, as fancans e apresentações em conjunto.</p>
             <button class="btn">Saiba Mais</button>
           </div>
         </div>
         <div class="card">
           <div class="card-img-wrapper">
-            <img src="imagens/disc.png" alt="imagem do projeto Casa Bela" />
+            <img src="imagens/disc.png" alt="top7 do discord" />
           </div>
           <div class="card-info">
             <h2>Top da Galera</h2>
             <h3>Top7 do Discord</h3>
             <p>Veja qual foi o top 7 da galera de cada semana, as mais votadas, os first picks do pessoal do discord</p>
-            <button class="btn">Saiba Mais</button>
+            <button class="btn" onclick="location.href='https://discord.gg/vwwKecpDH5'">Saiba Mais</button>
           </div>
         </div>
       </div>
+
+
+
 
 
       <section class="sessao-playlist" id="playlist">
@@ -281,18 +311,43 @@
             <div class="sessao-header">
               <h1>Playlists</h1>
             </div>
+
+            <div class="playlist-content">
+
+              <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/6f4PJKYiliFyLy1QbSyNKB?utm_source=generator&theme=0"
+                width="250" height="380" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+
+              <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/7eBsNMM1rNqsZpxIKVnOfC?utm_source=generator" width="250"
+                height="380" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+
+              <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/39Y2LFuSZKugXIWGHryPlg?utm_source=generator" width="250"
+                height="380" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+
+              <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/3vHwgvLDHUIYLeosTxbRYA?utm_source=generator" width="250"
+                height="380" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+            </div>
           </div>
         </div>
       </section>
 
 
 
-
-
-      <div class="sessao-header">
+      <div class="sessao-header" id="agenda">
         <h1>Agenda</h1>
       </div>
-      <section class="sessao-agenda" id="agenda">
+      <section class="sessao-agenda">
         <div class="events">
           <ul>
 
@@ -307,8 +362,8 @@
                 </h2>
               </div>
               <div class="details">
-                <h3>I-Land Season 1 Episódio-07</h3>
-                <p>Live Secreta no Discord vendo o episódio 07 do reality I-land</p>
+                <h3>I-Land Season 1 Episódio-07,08</h3>
+                <p>Live Secreta no Discord vendo os episódios 07 e 08 do reality I-land</p>
               </div>
               <div style="clear: both;"></div>
             </li>
@@ -379,7 +434,6 @@
           </div>
         </div>
       </section>
-
 
 
 
